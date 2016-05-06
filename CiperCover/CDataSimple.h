@@ -6,14 +6,14 @@
 class CDataSimple : public CDataChain
 {
 private:
-	// поертає довжину числа 
+	// Return long of numbers
 	int _numberLength(int number);
 	// 123 => ['1', '2', '3'];
 	char* _intToChars(int number);
 public:
 	CDataSimple(void);
 	~CDataSimple(void);
-	//Реалізація генератора повної послідовності цифр
+	//Generator of numbers
 	void Generate(int nDepth, int nMaxLength = 0);
 };
 
