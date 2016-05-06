@@ -44,8 +44,8 @@ void loadSequence(CWorkspace& ws) {
 }
 
 void findSubstring(CWorkspace& ws) {
-	// PROBLEMS  if m_refChain is private
-	CLink* link = new CLink(ws.getRefChain());
+	
+CLink* link = new CLink(ws.getRefChain());
 	
 	string str;
 	cout << "Write string to find " << endl; 
@@ -97,17 +97,6 @@ void showAllLinks(CWorkspace& ws) {
 }
 
 int main (int argc, char* argv[]) {
-	//CDataSimple dataSimple;
-	//dataSimple.Generate(15, 20);
-
-	//cout << dataSimple.GetFullString() << endl;
-
-	//CWorkspace ws(dataSimple);
-	//string pathToFile("save.bin");
-	//ws.Load(pathToFile);
-	//cout << dataSimple.GetFullString() << endl;
-	//ws.Save(pathToFile);
-
 	CDataSimple data;
 	CWorkspace ws(data);
 	CDialogManager mgr(ws);
