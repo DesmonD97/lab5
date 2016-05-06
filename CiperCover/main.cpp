@@ -11,9 +11,9 @@ void initSequence(CWorkspace& ws) {
 	int nDepth = 0;
 	int nMaxLength = 0;
 	
-	cout << "Vkazit do yakogo chisla generuvatu poslidovnist" << endl;
+	cout << "Last number" << endl;
 	cin >> nDepth;
-	cout << "Vvedit dovzinu poslidovnisti" << endl;
+	cout << "Input Lenght" << endl;
 	cin >> nMaxLength;
 
 	ws.Init(nDepth, nMaxLength);
@@ -25,7 +25,7 @@ void showFullSequence(CWorkspace& ws) {
 
 void saveSequence(CWorkspace& ws) {
 	string path;
-	cout << "Vrite where to save, or Enter * to use default path (save.bin)" << endl;
+	cout << "Write where to save, or Enter * to use default path (save.bin)" << endl;
 	cin >> path;
 	if (path.length() == 1 && path[0] == '*') {
 		path = "save.bin";
@@ -35,7 +35,7 @@ void saveSequence(CWorkspace& ws) {
 
 void loadSequence(CWorkspace& ws) {
 	string path;
-	cout << "Vrite path to file, or Enter * to use default path (save.bin)" << endl;
+	cout << "Write path to file, or Enter * to use default path (save.bin)" << endl;
 	cin >> path;
 	if (path.length() == 1 && path[0] == '*') {
 		path = "save.bin";
