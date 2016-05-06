@@ -28,7 +28,7 @@ bool CWorkspace::Save(std::string& sFilepath) {
 		fo.write((char*)&size, 4);
 		fo.write((char*)this->GetChainString(), size);
 
-		// зберігаємо всі наявні ссилки CLink
+		// Save all links of CLink
 		for (int i = 0; i < m_aLinks.size(); i++) {
 			m_aLinks[i]->Save(fo);
 		}
@@ -55,7 +55,7 @@ bool CWorkspace::Load(std::string& sFilepath) {
 		delete[] ps;
 		m_refChain.setString(fin);
 
-		// зчитуємо всі наявні ссилки CLink
+		// Read All links of CLink
 		while (fi.good()) {
 			int nStartPos = 0;
 			fi.read((char*)&nStartPos, 4);
